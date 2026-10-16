@@ -1,0 +1,15 @@
+{
+  "language": "en",
+  "category": "events",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "chips": [
+    "Still happening?",
+    "Is it free to get in?",
+    "How long is the line?",
+    "Who's playing?",
+    "Worth coming now?"
+  ]
+}

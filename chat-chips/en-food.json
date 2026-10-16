@@ -1,0 +1,16 @@
+{
+  "language": "en",
+  "category": "food",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "chips": [
+    "Rate the food ⭐",
+    "Is it busy right now?",
+    "Worth the wait?",
+    "What should I order?",
+    "Vegetarian options?",
+    "How are the prices?"
+  ]
+}

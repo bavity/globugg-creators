@@ -1,0 +1,21 @@
+name: 💡 Idea
+description: Something you'd love Globugg to do
+labels: [idea]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's the idea?
+      description: Describe it like you'd tell a friend.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it help?
+      description: What would you (or people near you) do with it?
+  - type: dropdown
+    id: help
+    attributes:
+      label: Would you help build it?
+      options: ["Not right now", "Yes, with art or design", "Yes, with local knowledge", "Yes, with code", "Yes, with testing"]

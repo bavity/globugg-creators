@@ -1,0 +1,13 @@
+{
+  "name": "Example frame",
+  "author": {
+    "name": "Your name",
+    "github": "your-github-username"
+  },
+  "license": "CC-BY-4.0",
+  "description": "A border or sticker overlay recorded on top of buggs. Add frame.png (1080\u00d71920, transparent).",
+  "file": "frame.png",
+  "tags": [
+    "party"
+  ]
+}

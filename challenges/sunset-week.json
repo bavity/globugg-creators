@@ -1,0 +1,16 @@
+{
+  "title": "Sunset Week",
+  "hashtag": "sunsetweek",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "description": "Drop a bugg of the sunset from anywhere. Most-liked sunset each day gets featured.",
+  "starts": "2026-11-02",
+  "ends": "2026-11-08",
+  "area": null,
+  "badge": {
+    "name": "Golden Hour",
+    "sticker": "cool"
+  }
+}

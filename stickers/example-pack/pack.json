@@ -1,0 +1,10 @@
+{
+  "name": "Example pack",
+  "author": {
+    "name": "Your name",
+    "github": "your-github-username"
+  },
+  "license": "CC-BY-4.0",
+  "description": "Replace this with your pack. Each sticker is a 512\u00d7512 transparent PNG in this folder.",
+  "stickers": []
+}

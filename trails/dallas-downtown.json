@@ -1,0 +1,47 @@
+{
+  "title": "Downtown Dallas in an afternoon",
+  "city": "Dallas",
+  "country": "US",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "badge": {
+    "name": "Downtown Explorer",
+    "sticker": "wave"
+  },
+  "description": "Three classic spots. Drop a bugg at each to earn the badge.",
+  "spots": [
+    {
+      "name": "Klyde Warren Park",
+      "lat": 32.7893,
+      "lng": -96.8016,
+      "tags": [
+        "park",
+        "food"
+      ],
+      "why": "Food trucks at lunch and something on the lawn most evenings."
+    },
+    {
+      "name": "Reunion Tower",
+      "lat": 32.7755,
+      "lng": -96.8089,
+      "tags": [
+        "views",
+        "landmark"
+      ],
+      "why": "The ball lights up after dark, and the view from the top is the best in town."
+    },
+    {
+      "name": "Deep Ellum",
+      "lat": 32.7843,
+      "lng": -96.7837,
+      "tags": [
+        "music",
+        "street",
+        "night"
+      ],
+      "why": "Murals by day, live music by night."
+    }
+  ]
+}

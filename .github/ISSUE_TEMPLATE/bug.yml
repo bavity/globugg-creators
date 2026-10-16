@@ -1,0 +1,23 @@
+name: 🐛 Something's broken
+description: Report a problem in the app or website
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead? Screenshots help.
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where?
+      options: ["iPhone app", "Android app", "Website on a phone", "Website on a computer"]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version or browser
+      placeholder: "e.g. Globugg 1.0 on iOS 26, or Chrome 141"

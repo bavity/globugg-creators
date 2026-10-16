@@ -1,0 +1,15 @@
+{
+  "language": "en",
+  "category": "nightlife",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "chips": [
+    "How's the vibe?",
+    "Cover charge?",
+    "Dress code?",
+    "Is it packed?",
+    "What's the music like?"
+  ]
+}

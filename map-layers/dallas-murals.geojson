@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "name": "Dallas public murals",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "category": "art",
+  "icon": "\ud83c\udfa8",
+  "description": "Murals you can visit any time. A great backdrop for a bugg.",
+  "license": "CC-BY-4.0",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.7837,
+          32.7843
+        ]
+      },
+      "properties": {
+        "name": "Deep Ellum murals",
+        "note": "Dozens of walls along Elm St and Main St."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8213,
+          32.7514
+        ]
+      },
+      "properties": {
+        "name": "Bishop Arts murals",
+        "note": "Small walls around N Bishop Ave."
+      }
+    }
+  ]
+}

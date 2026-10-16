@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private or security issue
+    url: mailto:support@globugg.com
+    about: Please email anything private (security, someone's personal data) instead of opening an issue.
