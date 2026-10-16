@@ -33,6 +33,12 @@ A transparent overlay recorded on top of a bugg: festival borders, team colours,
 Characters for the app's moments: the welcome screen, "Saved!" toasts, empty screens, badges and chat reactions.
 → [`stickers/`](stickers/)
 
+## 🔊 In your ears
+
+### Sound packs
+The little tones for likes, saves, comments, a bugg going live, boosts, arriving and signing in: kalimba, 8-bit, lo-fi, nature, a city's street sounds. People pick a pack in Settings.
+→ [`sound-packs/`](sound-packs/)
+
 ## 💬 In the live chat
 
 ### Chat chips
@@ -46,7 +52,6 @@ These come once the first types are live. Tell us in an [idea](../../issues/new?
 - **Event feeds:** a calendar link (iCal or RSS) for a venue or city, shown as upcoming-event pins (markets, gigs, matches).
 - **Pin skins:** custom pin styles for big local events.
 - **Translations:** the app in your language.
-- **Sound packs:** short sounds for drops, likes and arrivals.
 
 ## How it reaches the app
 

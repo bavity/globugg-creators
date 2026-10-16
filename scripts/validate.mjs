@@ -116,6 +116,50 @@ for (const file of files("challenges", ".json")) {
     fail(file, `"area" is null (anywhere) or { "lat", "lng", "radiusKm" (0.1-50) }`);
 }
 
+// ---------- Sound packs ----------
+const SOUND_SLOTS = ["like", "save", "commentSent", "commentIn", "dropLive", "boost", "welcome", "arrive", "error"];
+const wavInfo = (file) => {
+  const b = readFileSync(file);
+  if (b.length < 44 || b.toString("ascii", 0, 4) !== "RIFF" || b.toString("ascii", 8, 12) !== "WAVE") return null;
+  // Walk the chunks for "fmt " and "data".
+  let fmt = null, dataLen = 0;
+  for (let o = 12; o + 8 <= b.length; ) {
+    const id = b.toString("ascii", o, o + 4), size = b.readUInt32LE(o + 4);
+    if (id === "fmt ") fmt = { format: b.readUInt16LE(o + 8), channels: b.readUInt16LE(o + 10), rate: b.readUInt32LE(o + 12), bits: b.readUInt16LE(o + 22) };
+    if (id === "data") dataLen = size;
+    o += 8 + size + (size % 2);
+  }
+  return fmt && { ...fmt, seconds: dataLen / (fmt.rate * fmt.channels * (fmt.bits / 8)) };
+};
+for (const pack of existsSync("sound-packs") ? readdirSync("sound-packs").filter((d) => statSync(join("sound-packs", d)).isDirectory()) : []) {
+  const dir = join("sound-packs", pack);
+  if (!slug.test(pack)) fail(dir, "folder name must be lowercase-with-dashes");
+  const meta = readJson(join(dir, "pack.json"));
+  if (!meta) continue;
+  checkAuthor(join(dir, "pack.json"), meta.author);
+  if (meta.license !== "CC-BY-4.0") fail(join(dir, "pack.json"), `"license" must be "CC-BY-4.0"`);
+  const sounds = meta.sounds ?? {};
+  if (!Object.keys(sounds).length) fail(join(dir, "pack.json"), `"sounds" needs at least one sound`);
+  for (const [slot, f] of Object.entries(sounds)) {
+    if (!SOUND_SLOTS.includes(slot)) {
+      fail(join(dir, "pack.json"), `"${slot}" isn't a sound (use: ${SOUND_SLOTS.join(", ")})`);
+      continue;
+    }
+    const file = join(dir, f);
+    if (!existsSync(file)) {
+      fail(join(dir, "pack.json"), `"${f}" isn't in the folder`);
+      continue;
+    }
+    const w = wavInfo(file);
+    if (!w || w.format !== 1 || w.bits !== 16) fail(file, "must be a 16-bit PCM WAV");
+    else {
+      if (w.rate !== 44100 && w.rate !== 48000) fail(file, `must be 44.1 or 48 kHz (it's ${w.rate} Hz)`);
+      if (w.seconds > 1.5) fail(file, `must be 1.5 s or shorter (it's ${w.seconds.toFixed(2)} s)`);
+    }
+    if (statSync(file).size > 150 * 1024) fail(file, "must be 150 KB or smaller");
+  }
+}
+
 // ---------- Video frames ----------
 for (const dirName of existsSync("video-frames") ? readdirSync("video-frames").filter((d) => statSync(join("video-frames", d)).isDirectory()) : []) {
   const dir = join("video-frames", dirName);

@@ -6,7 +6,7 @@ Thanks for helping! Here's everything you need.
 
 - **Only submit your own work.** No traced, AI-copied or borrowed art, brands, logos or real people's likeness without permission.
 - **Keep it Globugg:** playful, welcoming, for ages 13+. Nothing hateful, sexual, violent or political. See the [Community guidelines](https://globugg.com/guidelines).
-- **One idea per pull request** (one layer, trail, challenge, theme, frame or sticker pack), so it's quick to review.
+- **One idea per pull request** (one layer, trail, challenge, theme, frame, sticker pack or sound pack), so it's quick to review.
 
 ## Licence (please read)
 

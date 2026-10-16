@@ -25,6 +25,12 @@ const videoFrames = dirs("video-frames")
     return { id: d, ...f, url: `video-frames/${d}/${f.file ?? "frame.png"}` };
   });
 
+const soundPacks = dirs("sound-packs").map((d) => {
+  const p = read(join("sound-packs", d, "pack.json"));
+  cpSync(join("sound-packs", d), join("dist", "sound-packs", d), { recursive: true });
+  return { id: d, ...p, sounds: Object.fromEntries(Object.entries(p.sounds).map(([slot, f]) => [slot, `sound-packs/${d}/${f}`])) };
+});
+
 const catalog = {
   version: 1,
   builtAt: new Date().toISOString(),
@@ -35,7 +41,12 @@ const catalog = {
   challenges: list("challenges", ".json").map((f) => ({ id: id(f), ...read(join("challenges", f)) })),
   stickerPacks,
   videoFrames,
+  soundPacks,
 };
+// Everyone credited anywhere in the catalog, for the app's contributors list.
+const people = new Map();
+for (const list of Object.values(catalog)) if (Array.isArray(list)) for (const item of list) if (item.author?.name) people.set(item.author.github ?? item.author.name, item.author);
+catalog.contributors = [...people.values()].filter((a) => a.github !== "bavity");
 writeFileSync("dist/catalog.json", JSON.stringify(catalog));
 const counts = Object.entries(catalog).filter(([, v]) => Array.isArray(v)).map(([k, v]) => `${v.length} ${k}`);
 console.log(`dist/catalog.json: ${counts.join(", ")}`);

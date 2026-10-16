@@ -14,6 +14,7 @@ This repo is where the community helps build Globugg. You don't need to write co
 | 🎨 **Map themes** | A colour palette for the whole map | Settings → Map | [`map-themes/`](map-themes/) |
 | 🎬 **Video frames** | Overlays recorded on top of buggs | The recorder | [`video-frames/`](video-frames/) |
 | 😄 **Sticker packs** | Characters for the app's moments and badges | Across the app | [`stickers/`](stickers/) |
+| 🔊 **Sound packs** | The little tones for likes, comments, drops and boosts | Settings → Sounds | [`sound-packs/`](sound-packs/) |
 | 💬 **Chat chips** | One-tap questions under live videos, per place type and language | The live chat | [`chat-chips/`](chat-chips/) |
 | 💡 **Ideas & bugs** | Features you want, things that broke | | [Issues](../../issues/new/choose) |
 

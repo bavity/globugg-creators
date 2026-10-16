@@ -1,0 +1,20 @@
+{
+  "name": "Globugg default",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "license": "CC-BY-4.0",
+  "description": "The sounds built into the app. Use them as a reference for length and loudness.",
+  "sounds": {
+    "like": "like.wav",
+    "save": "save.wav",
+    "commentSent": "commentSent.wav",
+    "commentIn": "commentIn.wav",
+    "dropLive": "dropLive.wav",
+    "boost": "boost.wav",
+    "welcome": "welcome.wav",
+    "arrive": "arrive.wav",
+    "error": "error.wav"
+  }
+}
