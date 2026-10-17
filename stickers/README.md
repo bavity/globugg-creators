@@ -1,6 +1,6 @@
 # Sticker packs
 
-People place stickers on their buggs from the drop screen, and they appear at Globugg's moments: the welcome screen, toasts ("Saved!") and empty screens. See [`globugg-moments/`](globugg-moments/) for a finished pack.
+People place stickers on their buggs from the drop screen, and they appear at Globugg's moments: the welcome screen, toasts ("Saved!") and empty screens. See [`mood/`](mood/) for a finished pack.
 
 ## Make a pack
 

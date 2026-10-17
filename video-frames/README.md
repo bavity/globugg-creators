@@ -9,7 +9,7 @@ Make a folder (lowercase-with-dashes) with:
 
 ```json
 {
-  "name": "Afrobeats night",
+  "name": "Afrobeats",
   "author": { "name": "Your name", "github": "your-username" },
   "license": "CC-BY-4.0",
   "description": "Gold border with a little drum in the corner.",
@@ -18,4 +18,4 @@ Make a folder (lowercase-with-dashes) with:
 }
 ```
 
-Keep the **middle clear**, and keep the **bottom 400 px and right 200 px light**, because the app's buttons and captions sit there. No logos, brands or text that could look like an ad.
+The **name is one word** (12 characters max), because it's shown under the frame's tile. Keep the **middle clear**, and keep the **bottom 400 px and right 200 px light**, because the app's buttons and captions sit there. No logos, brands or text that could look like an ad.

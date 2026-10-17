@@ -178,6 +178,7 @@ for (const dirName of existsSync("video-frames") ? readdirSync("video-frames").f
   if (!meta) continue;
   checkAuthor(join(dir, "frame.json"), meta.author);
   if (meta.license !== "CC-BY-4.0") fail(join(dir, "frame.json"), `"license" must be "CC-BY-4.0"`);
+  if (typeof meta.name !== "string" || !/^\S{2,12}$/.test(meta.name)) fail(join(dir, "frame.json"), `"name" must be one word, 12 characters max (it's shown under the frame's tile), e.g. "Confetti"`);
   const file = join(dir, meta.file ?? "frame.png");
   if (dirName === "example" && !existsSync(file)) continue; // the template has no art
   if (!existsSync(file)) {
