@@ -9,10 +9,10 @@ File name: `<language>-<category>.json`, e.g. `en-food.json` or `pt-BR-events.js
   "language": "en",
   "category": "food",
   "author": { "name": "Your name", "github": "your-username" },
-  "chips": ["Rate the food ⭐", "Is it busy right now?", "Worth the wait?"]
+  "chips": ["Rate the food", "Is it busy right now?", "Worth the wait?"]
 }
 ```
 
 - **3 to 12 chips**, each **32 characters or fewer**.
 - Questions about *right now* work best: busy? queue? still on? worth it?
-- One emoji at most per chip. Keep them friendly and neutral.
+- Words only, no emoji. Keep them friendly and neutral.

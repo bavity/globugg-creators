@@ -9,7 +9,7 @@ File name: lowercase-with-dashes ending in `.geojson`, e.g. `lagos-street-food.g
   "type": "FeatureCollection",
   "name": "Lagos street food",
   "category": "food",
-  "icon": "🍢",
+  "icon": "utensils",
   "description": "Stalls that are usually open in the evening.",
   "author": { "name": "Your name", "github": "your-username" },
   "license": "CC-BY-4.0",
@@ -21,6 +21,6 @@ File name: lowercase-with-dashes ending in `.geojson`, e.g. `lagos-street-food.g
 
 - **Coordinates are `[longitude, latitude]`**, longitude first, as GeoJSON requires.
 - 1 to 500 places. Each needs `properties.name`; `note` is optional (160 characters max).
-- `icon`: one emoji for the layer's pins.
+- `icon`: the name of an icon for the layer's pins, from [`icons/`](../icons/) (e.g. `palette`, `utensils`, `music`). Need one that isn't there? Ask in an issue.
 - `license`: `CC-BY-4.0` if you gathered the places yourself, or `ODbL-1.0` if they come from OpenStreetMap (then say so in `description`).
 - Public places only. Layers are checked for accuracy before they go live, and places that close are removed.

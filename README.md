@@ -8,15 +8,15 @@ This repo is where the community helps build Globugg. You don't need to write co
 
 | | What it is | Where it shows up | Folder |
 |---|---|---|---|
-| 🗺️ **Map layers** | Pins people can switch on: murals, skate spots, street food… | On the map | [`map-layers/`](map-layers/) |
-| 🏁 **Trails** | City quests: drop a bugg at each spot to earn a badge | On the map and profiles | [`trails/`](trails/) |
-| 📅 **Challenges** | Themed weeks with a hashtag, special pins and a badge | On the map | [`challenges/`](challenges/) |
-| 🎨 **Map themes** | A colour palette for the whole map | Settings → Map | [`map-themes/`](map-themes/) |
-| 🎬 **Video frames** | Overlays recorded on top of buggs | The recorder | [`video-frames/`](video-frames/) |
-| 😄 **Sticker packs** | Characters for the app's moments and badges | Across the app | [`stickers/`](stickers/) |
-| 🔊 **Sound packs** | The little tones for likes, comments, drops and boosts | Settings → Sounds | [`sound-packs/`](sound-packs/) |
-| 💬 **Chat chips** | One-tap questions under live videos, per place type and language | The live chat | [`chat-chips/`](chat-chips/) |
-| 💡 **Ideas & bugs** | Features you want, things that broke | | [Issues](../../issues/new/choose) |
+| <img src=".github/badges/map.svg" width="20" height="20" alt=""> **Map layers** | Pins people can switch on: murals, skate spots, street food… | On the map | [`map-layers/`](map-layers/) |
+| <img src=".github/badges/route.svg" width="20" height="20" alt=""> **Trails** | City quests: drop a bugg at each spot to earn a badge | On the map and profiles | [`trails/`](trails/) |
+| <img src=".github/badges/trophy.svg" width="20" height="20" alt=""> **Challenges** | Themed weeks with a hashtag, special pins and a badge | On the map | [`challenges/`](challenges/) |
+| <img src=".github/badges/palette.svg" width="20" height="20" alt=""> **Map themes** | A colour palette for the whole map | Settings → Map | [`map-themes/`](map-themes/) |
+| <img src=".github/badges/clapperboard.svg" width="20" height="20" alt=""> **Video frames** | Overlays recorded on top of buggs | The recorder | [`video-frames/`](video-frames/) |
+| <img src=".github/badges/sticker.svg" width="20" height="20" alt=""> **Sticker packs** | Characters for the app's moments and badges | Across the app | [`stickers/`](stickers/) |
+| <img src=".github/badges/volume-2.svg" width="20" height="20" alt=""> **Sound packs** | The little tones for likes, comments, drops and boosts | Settings → Sounds | [`sound-packs/`](sound-packs/) |
+| <img src=".github/badges/message-circle.svg" width="20" height="20" alt=""> **Chat chips** | One-tap questions under live videos, per place type and language | The live chat | [`chat-chips/`](chat-chips/) |
+| <img src=".github/badges/lightbulb.svg" width="20" height="20" alt=""> **Ideas & bugs** | Features you want, things that broke | | [Issues](../../issues/new/choose) |
 
 Ideas for each, and what's coming next, are in **[IDEAS.md](IDEAS.md)**.
 

@@ -2,7 +2,7 @@
 
 Everything here ships **inside the app**: on the map, in the video player or in the chat. It's credited to you. Contributions are data and art, never code, so they're safe to run and quick to review.
 
-## 🗺️ On the map
+## <img src=".github/badges/map.svg" width="20" height="20" alt=""> On the map
 
 ### Map layers: places worth knowing
 A layer is a set of pins people can switch on from the map: **murals, skate spots, street food, free Wi-Fi, water fountains, accessible restrooms, EV chargers, viewpoints, basketball courts, farmers markets…**
@@ -23,7 +23,7 @@ Ideas: *#sunsetweek*, *#streetfoodfriday*, *#rainydays*, *#marathonmorning* (aro
 A full colour palette for the map: neon nights, retro paper, pastel, high contrast for low vision, colour-blind friendly. People choose it in Settings.
 → [`map-themes/`](map-themes/)
 
-## 🎬 On the videos
+## <img src=".github/badges/clapperboard.svg" width="20" height="20" alt=""> On the videos
 
 ### Video frames
 A transparent overlay recorded on top of a bugg: festival borders, team colours, birthday confetti, "live from…" banners. It's picked in the recorder.
@@ -33,13 +33,13 @@ A transparent overlay recorded on top of a bugg: festival borders, team colours,
 Characters for the app's moments: the welcome screen, "Saved!" toasts, empty screens, badges and chat reactions.
 → [`stickers/`](stickers/)
 
-## 🔊 In your ears
+## <img src=".github/badges/volume-2.svg" width="20" height="20" alt=""> In your ears
 
 ### Sound packs
 The little tones for likes, saves, comments, a bugg going live, boosts, arriving and signing in: kalimba, 8-bit, lo-fi, nature, a city's street sounds. People pick a pack in Settings.
 → [`sound-packs/`](sound-packs/)
 
-## 💬 In the live chat
+## <img src=".github/badges/message-circle.svg" width="20" height="20" alt=""> In the live chat
 
 ### Chat chips
 The one-tap questions under a live video ("Is it busy right now?"), for each kind of place and in each language.

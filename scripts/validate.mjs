@@ -5,15 +5,26 @@ import { join, extname, basename } from "node:path";
 
 const errors = [];
 const fail = (file, msg) => errors.push(`${file}: ${msg}`);
+// Globugg uses icons, not emoji: pins pick a name from icons/, and text stays words.
+const EMOJI = /(?![\u00a9\u00ae\u2122])\p{Extended_Pictographic}/u;
+const findEmoji = (v, path = "") => {
+  if (typeof v === "string") return EMOJI.test(v) ? path || "a value" : null;
+  if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) { const hit = findEmoji(x, path ? `${path}.${k}` : k); if (hit) return hit; }
+  return null;
+};
 const readJson = (file) => {
   try {
-    return JSON.parse(readFileSync(file, "utf8"));
+    const data = JSON.parse(readFileSync(file, "utf8"));
+    const hit = findEmoji(data);
+    if (hit) fail(file, `${hit} contains an emoji. Use words instead (and for pins, an icon name from icons/)`);
+    return data;
   } catch (e) {
     fail(file, `isn't valid JSON (${e.message})`);
     return null;
   }
 };
 const files = (dir, ext) => (existsSync(dir) ? readdirSync(dir).filter((f) => extname(f) === ext).map((f) => join(dir, f)) : []);
+const ICONS = new Set(files("icons", ".svg").map((f) => basename(f, ".svg")));
 const pngSize = (file) => {
   const b = readFileSync(file);
   if (b.length < 24 || b.toString("ascii", 1, 4) !== "PNG") return null;
@@ -89,7 +100,7 @@ for (const file of files("map-layers", ".geojson")) {
   if (l.type !== "FeatureCollection") fail(file, `"type" must be "FeatureCollection"`);
   if (l.license !== "CC-BY-4.0" && l.license !== "ODbL-1.0") fail(file, `"license" must be "CC-BY-4.0" (your own data) or "ODbL-1.0" (from OpenStreetMap)`);
   if (typeof l.name !== "string" || !l.name.trim() || l.name.length > 40) fail(file, `"name" is required (40 max)`);
-  if (typeof l.icon !== "string" || [...l.icon].length > 2) fail(file, `"icon" must be one emoji`);
+  if (!ICONS.has(l.icon)) fail(file, `"icon" must be one of the names in icons/ (e.g. "palette", "utensils"); see icons/README.md`);
   if (!Array.isArray(l.features) || l.features.length < 1 || l.features.length > 500) fail(file, "needs 1 to 500 places");
   else
     l.features.forEach((f, i) => {

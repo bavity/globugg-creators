@@ -1,4 +1,4 @@
-name: 🐛 Something's broken
+name: Something's broken
 description: Report a problem in the app or website
 labels: [bug]
 body:

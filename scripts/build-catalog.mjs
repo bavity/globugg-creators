@@ -10,6 +10,8 @@ const id = (f) => basename(f, extname(f));
 
 rmSync("dist", { recursive: true, force: true });
 mkdirSync("dist", { recursive: true });
+// The pin icons map layers can use (see icons/README.md).
+cpSync("icons", join("dist", "icons"), { recursive: true });
 
 const stickerPacks = dirs("stickers")
   .map((d) => ({ id: d, ...read(join("stickers", d, "pack.json")) }))
