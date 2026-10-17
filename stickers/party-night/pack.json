@@ -1,0 +1,58 @@
+{
+  "name": "Party night",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "license": "CC-BY-4.0",
+  "description": "For nights out, birthdays and big moments.",
+  "stickers": [
+    {
+      "file": "lets-go.png",
+      "name": "Let's go",
+      "tags": [
+        "party",
+        "yay"
+      ]
+    },
+    {
+      "file": "vibes.png",
+      "name": "Vibes",
+      "tags": [
+        "music",
+        "party"
+      ]
+    },
+    {
+      "file": "birthday.png",
+      "name": "B-day",
+      "tags": [
+        "party",
+        "yay"
+      ]
+    },
+    {
+      "file": "cheers.png",
+      "name": "Cheers",
+      "tags": [
+        "party"
+      ]
+    },
+    {
+      "file": "lit.png",
+      "name": "Lit",
+      "tags": [
+        "party",
+        "wow"
+      ]
+    },
+    {
+      "file": "iconic.png",
+      "name": "Iconic",
+      "tags": [
+        "wow",
+        "like"
+      ]
+    }
+  ]
+}

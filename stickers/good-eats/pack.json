@@ -1,0 +1,57 @@
+{
+  "name": "Good eats",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "license": "CC-BY-4.0",
+  "description": "For food spots, cafes and treats.",
+  "stickers": [
+    {
+      "file": "slice.png",
+      "name": "Slice",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "file": "coffee-run.png",
+      "name": "Coffee run",
+      "tags": [
+        "food",
+        "hello"
+      ]
+    },
+    {
+      "file": "treat.png",
+      "name": "Treat",
+      "tags": [
+        "food",
+        "yay"
+      ]
+    },
+    {
+      "file": "yum.png",
+      "name": "Yum",
+      "tags": [
+        "food",
+        "like"
+      ]
+    },
+    {
+      "file": "lunch.png",
+      "name": "Lunch",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "file": "fresh.png",
+      "name": "Fresh",
+      "tags": [
+        "food",
+        "wow"
+      ]
+    }
+  ]
+}

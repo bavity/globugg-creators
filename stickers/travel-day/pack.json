@@ -1,0 +1,58 @@
+{
+  "name": "Travel day",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "license": "CC-BY-4.0",
+  "description": "For trips, landmarks and new places.",
+  "stickers": [
+    {
+      "file": "take-off.png",
+      "name": "Take off",
+      "tags": [
+        "travel",
+        "hello"
+      ]
+    },
+    {
+      "file": "packed.png",
+      "name": "Packed",
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "file": "snap.png",
+      "name": "Snap",
+      "tags": [
+        "wow",
+        "views"
+      ]
+    },
+    {
+      "file": "explore.png",
+      "name": "Explore",
+      "tags": [
+        "travel",
+        "outdoors"
+      ]
+    },
+    {
+      "file": "im-here.png",
+      "name": "I'm here",
+      "tags": [
+        "hello",
+        "travel"
+      ]
+    },
+    {
+      "file": "vacay.png",
+      "name": "Vacay",
+      "tags": [
+        "travel",
+        "chill"
+      ]
+    }
+  ]
+}
