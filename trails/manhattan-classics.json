@@ -1,0 +1,56 @@
+{
+  "title": "Manhattan classics",
+  "city": "New York",
+  "country": "US",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "badge": {
+    "name": "Big Apple Explorer",
+    "sticker": "thumbsup"
+  },
+  "description": "From the bridge to the park: four spots every New Yorker knows. Drop a bugg at each to earn the badge.",
+  "spots": [
+    {
+      "name": "Brooklyn Bridge",
+      "lat": 40.7056,
+      "lng": -73.9964,
+      "tags": [
+        "landmark",
+        "views"
+      ],
+      "why": "Walk out from the Manhattan side for the skyline behind you."
+    },
+    {
+      "name": "Washington Square Park",
+      "lat": 40.7309,
+      "lng": -73.9976,
+      "tags": [
+        "park",
+        "music"
+      ],
+      "why": "Musicians, chess players and the arch, any time of day."
+    },
+    {
+      "name": "Times Square",
+      "lat": 40.7573,
+      "lng": -73.9859,
+      "tags": [
+        "street",
+        "night"
+      ],
+      "why": "Brightest after dark. Stand on the red steps for the full view."
+    },
+    {
+      "name": "Bethesda Terrace",
+      "lat": 40.7742,
+      "lng": -73.9711,
+      "tags": [
+        "park",
+        "views"
+      ],
+      "why": "The fountain, the arcade and buskers in the heart of Central Park."
+    }
+  ]
+}

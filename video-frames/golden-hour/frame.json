@@ -1,0 +1,15 @@
+{
+  "name": "Golden hour",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "license": "CC-BY-4.0",
+  "description": "A warm sunset glow around the edges, with a little sun.",
+  "file": "frame.png",
+  "tags": [
+    "sunset",
+    "views",
+    "outdoors"
+  ]
+}

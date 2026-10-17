@@ -1,0 +1,39 @@
+name: Publish to the app
+# Everything merged into main goes live in Globugg within a few minutes: the
+# catalog and its files are uploaded to media.globugg.com/creators/, which the
+# app and the API read. It also runs weekly, because the media bucket deletes
+# files after a year and re-uploading keeps the catalog fresh.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: publish
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      ENDPOINT: https://${{ vars.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+      DEST: s3://${{ vars.R2_BUCKET }}/creators
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/validate.mjs
+      - run: node scripts/build-catalog.mjs
+      # Files first (cached for a day), then the catalog that points at them (5 minutes).
+      - name: Upload files
+        run: aws s3 cp dist "$DEST" --recursive --exclude catalog.json --endpoint-url "$ENDPOINT" --cache-control "public, max-age=86400" --only-show-errors
+      - name: Upload catalog
+        run: aws s3 cp dist/catalog.json "$DEST/catalog.json" --endpoint-url "$ENDPOINT" --content-type application/json --cache-control "public, max-age=300" --only-show-errors
+      - name: Check it's live
+        run: curl -fsS https://media.globugg.com/creators/catalog.json -o /dev/null

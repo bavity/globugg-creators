@@ -1,0 +1,81 @@
+{
+  "name": "Globugg moments",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "license": "CC-BY-4.0",
+  "description": "Globugg's own character, for every mood on your buggs.",
+  "stickers": [
+    {
+      "file": "wave.png",
+      "name": "Waving hello",
+      "tags": [
+        "hello"
+      ]
+    },
+    {
+      "file": "wink.png",
+      "name": "Wink",
+      "tags": [
+        "like",
+        "yay"
+      ]
+    },
+    {
+      "file": "cool.png",
+      "name": "Too cool",
+      "tags": [
+        "wow",
+        "party"
+      ]
+    },
+    {
+      "file": "boba.png",
+      "name": "Boba break",
+      "tags": [
+        "food",
+        "chill"
+      ]
+    },
+    {
+      "file": "cute.png",
+      "name": "Pouty",
+      "tags": [
+        "thinking",
+        "sleepy"
+      ]
+    },
+    {
+      "file": "giggle.png",
+      "name": "Giggling",
+      "tags": [
+        "yay",
+        "like"
+      ]
+    },
+    {
+      "file": "laugh.png",
+      "name": "Big laugh",
+      "tags": [
+        "yay",
+        "wow"
+      ]
+    },
+    {
+      "file": "thinking.png",
+      "name": "Thinking",
+      "tags": [
+        "thinking"
+      ]
+    },
+    {
+      "file": "thumbsup.png",
+      "name": "Thumbs up",
+      "tags": [
+        "like",
+        "yay"
+      ]
+    }
+  ]
+}

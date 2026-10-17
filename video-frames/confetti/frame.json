@@ -1,0 +1,15 @@
+{
+  "name": "Confetti",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "license": "CC-BY-4.0",
+  "description": "Party confetti across the top.",
+  "file": "frame.png",
+  "tags": [
+    "party",
+    "events",
+    "music"
+  ]
+}

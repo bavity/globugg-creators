@@ -1,0 +1,13 @@
+{
+  "name": "Globugg classic",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "license": "CC-BY-4.0",
+  "description": "A lime border with a Globugg pin in the corner.",
+  "file": "frame.png",
+  "tags": [
+    "any"
+  ]
+}

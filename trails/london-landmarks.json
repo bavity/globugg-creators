@@ -1,0 +1,56 @@
+{
+  "title": "London landmarks in a day",
+  "city": "London",
+  "country": "GB",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "badge": {
+    "name": "London Explorer",
+    "sticker": "cool"
+  },
+  "description": "Four classics along the Thames, walkable in an afternoon. Drop a bugg at each to earn the badge.",
+  "spots": [
+    {
+      "name": "Tower Bridge",
+      "lat": 51.5055,
+      "lng": -0.0754,
+      "tags": [
+        "landmark",
+        "views"
+      ],
+      "why": "The bascules lift a few times a week; check the bridge lift times."
+    },
+    {
+      "name": "Borough Market",
+      "lat": 51.5056,
+      "lng": -0.0902,
+      "tags": [
+        "food",
+        "market"
+      ],
+      "why": "London's oldest food market. Busiest at lunch, quieter on weekday mornings."
+    },
+    {
+      "name": "Trafalgar Square",
+      "lat": 51.5085,
+      "lng": -0.1284,
+      "tags": [
+        "landmark",
+        "street"
+      ],
+      "why": "Street performers, the lions and the National Gallery steps."
+    },
+    {
+      "name": "Big Ben",
+      "lat": 51.5007,
+      "lng": -0.1246,
+      "tags": [
+        "landmark",
+        "views"
+      ],
+      "why": "Best seen from Westminster Bridge, especially as the lights come on."
+    }
+  ]
+}

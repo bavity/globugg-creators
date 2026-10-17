@@ -1,0 +1,16 @@
+{
+  "title": "Show your city",
+  "hashtag": "showyourcity",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "description": "Globugg is here! Show everyone your favourite spot in your city. Most-liked bugg each day gets featured.",
+  "starts": "2026-10-17",
+  "ends": "2026-11-15",
+  "area": null,
+  "badge": {
+    "name": "City Insider",
+    "sticker": "wave"
+  }
+}

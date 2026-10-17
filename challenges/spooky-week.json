@@ -1,0 +1,16 @@
+{
+  "title": "Spooky Week",
+  "hashtag": "spookyweek",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "description": "Costumes, haunted houses and the best-decorated streets. Keep it fun and safe.",
+  "starts": "2026-10-24",
+  "ends": "2026-11-01",
+  "area": null,
+  "badge": {
+    "name": "Night Owl",
+    "sticker": "giggle"
+  }
+}

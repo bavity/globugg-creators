@@ -1,0 +1,56 @@
+{
+  "title": "Lagos: Island to Lekki",
+  "city": "Lagos",
+  "country": "NG",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "badge": {
+    "name": "Eko Explorer",
+    "sticker": "wave"
+  },
+  "description": "Art, history and green space from Lagos Island to the Lekki peninsula. Drop a bugg at each to earn the badge.",
+  "spots": [
+    {
+      "name": "Freedom Park",
+      "lat": 6.4488,
+      "lng": 3.3965,
+      "tags": [
+        "history",
+        "music",
+        "art"
+      ],
+      "why": "A colonial-era prison turned park, with concerts and art most weekends."
+    },
+    {
+      "name": "Lekki-Ikoyi Link Bridge",
+      "lat": 6.4488,
+      "lng": 3.4553,
+      "tags": [
+        "landmark",
+        "views"
+      ],
+      "why": "Lit up at night, and a favourite for a walk or a run over the lagoon."
+    },
+    {
+      "name": "Nike Art Gallery",
+      "lat": 6.4315,
+      "lng": 3.4819,
+      "tags": [
+        "art"
+      ],
+      "why": "Four floors of Nigerian art, from textiles to sculpture."
+    },
+    {
+      "name": "Lekki Conservation Centre",
+      "lat": 6.4362,
+      "lng": 3.5356,
+      "tags": [
+        "nature",
+        "views"
+      ],
+      "why": "Home to one of Africa's longest canopy walkways."
+    }
+  ]
+}
