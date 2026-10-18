@@ -1,0 +1,15 @@
+{
+  "name": "Neon",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "license": "CC-BY-4.0",
+  "description": "A glowing neon tube with lightning and stars, for nights out.",
+  "file": "frame.png",
+  "tags": [
+    "party",
+    "music",
+    "night"
+  ]
+}
