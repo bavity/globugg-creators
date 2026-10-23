@@ -30,6 +30,26 @@ const pngSize = (file) => {
   if (b.length < 24 || b.toString("ascii", 1, 4) !== "PNG") return null;
   return { width: b.readUInt32BE(16), height: b.readUInt32BE(20), alpha: b[25] === 6 || b[25] === 4 };
 };
+/** Width and height of a JPEG (from its frame header) or WebP, or null if it's neither. */
+const photoSize = (file) => {
+  const b = readFileSync(file);
+  if (b[0] === 0xff && b[1] === 0xd8) {
+    for (let i = 2; i + 9 < b.length; ) {
+      if (b[i] !== 0xff) return null;
+      const marker = b[i + 1];
+      if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) return { width: b.readUInt16BE(i + 7), height: b.readUInt16BE(i + 5) };
+      i += 2 + b.readUInt16BE(i + 2);
+    }
+    return null;
+  }
+  if (b.toString("ascii", 0, 4) === "RIFF" && b.toString("ascii", 8, 12) === "WEBP") {
+    const kind = b.toString("ascii", 12, 16);
+    if (kind === "VP8 ") return { width: b.readUInt16LE(26) & 0x3fff, height: b.readUInt16LE(28) & 0x3fff };
+    if (kind === "VP8L") { const v = b.readUInt32LE(21); return { width: (v & 0x3fff) + 1, height: ((v >> 14) & 0x3fff) + 1 }; }
+    if (kind === "VP8X") return { width: 1 + b.readUIntLE(24, 3), height: 1 + b.readUIntLE(27, 3) };
+  }
+  return null;
+};
 const isColor = (v) => typeof v === "string" && /^(#[0-9a-f]{3,8}|rgba?\([\d\s.,%]+\))$/i.test(v);
 const checkAuthor = (file, a) => {
   if (!a || typeof a.name !== "string" || !a.name.trim()) fail(file, `needs "author": { "name": "...", "github": "..." }`);
@@ -109,6 +129,21 @@ for (const file of files("map-layers", ".geojson")) {
         fail(file, `place ${i + 1}: needs a Point with [lng, lat]`);
       if (typeof f?.properties?.name !== "string" || !f.properties.name.trim()) fail(file, `place ${i + 1}: needs properties.name`);
       if (f?.properties?.note && f.properties.note.length > 160) fail(file, `place ${i + 1}: note is 160 characters max`);
+      const { address, image, imageCredit } = f?.properties ?? {};
+      if (address !== undefined && (typeof address !== "string" || !address.trim() || address.length > 120)) fail(file, `place ${i + 1}: address is 120 characters max`);
+      if (image !== undefined) {
+        // Photos live in a folder named after the layer: map-layers/<layer>/<photo>.
+        const photo = join("map-layers", basename(file, ".geojson"), String(image));
+        if (typeof image !== "string" || !/^[a-z0-9]+(-[a-z0-9]+)*\.(jpe?g|webp)$/.test(image)) fail(file, `place ${i + 1}: image must be a lowercase-with-dashes .jpg or .webp file name`);
+        else if (!existsSync(photo)) fail(file, `place ${i + 1}: ${photo} doesn't exist`);
+        else {
+          const size = photoSize(photo);
+          if (!size) fail(photo, "isn't a JPEG or WebP image");
+          else if (size.width < 800 || size.width > 1600 || size.width < size.height) fail(photo, `should be landscape, 800-1600 px wide (it's ${size.width}x${size.height})`);
+          if (statSync(photo).size > 400_000) fail(photo, `is ${Math.round(statSync(photo).size / 1000)} KB; 400 KB max`);
+        }
+        if (typeof imageCredit !== "string" || imageCredit.trim().length < 3 || imageCredit.length > 120) fail(file, `place ${i + 1}: a photo needs "imageCredit" (who took it and its licence, 120 max)`);
+      } else if (imageCredit !== undefined) fail(file, `place ${i + 1}: "imageCredit" without an "image"`);
     });
 }
 

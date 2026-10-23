@@ -4,6 +4,8 @@
 [Creative Commons Attribution 4.0 International licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode).
 Each contribution's author is named in its file's `"author"` field. Credit them as "by <name> (Globugg Creators)".
 
+**Place photos** in map layers keep their own licence, named in each place's `"imageCredit"` (for example CC BY-SA 4.0 or public domain). Follow that licence when reusing a photo.
+
 **The scripts** (`scripts/`) is available under the MIT licence: you may use, copy, change and share it freely, without warranty.
 
 "Globugg" and the Globugg logo are trademarks of Bavity LLC and aren't covered by these licences.

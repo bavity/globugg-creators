@@ -38,7 +38,16 @@ const catalog = {
   builtAt: new Date().toISOString(),
   mapThemes: list("map-themes", ".json").map((f) => ({ id: id(f), ...read(join("map-themes", f)) })),
   chatChips: list("chat-chips", ".json").map((f) => ({ id: id(f), ...read(join("chat-chips", f)) })),
-  mapLayers: list("map-layers", ".geojson").map((f) => ({ id: id(f), ...read(join("map-layers", f)) })),
+  mapLayers: list("map-layers", ".geojson").map((f) => {
+    const layer = { id: id(f), ...read(join("map-layers", f)) };
+    // Place photos: copied next to the catalog, linked from each place as imageUrl.
+    if (existsSync(join("map-layers", layer.id))) cpSync(join("map-layers", layer.id), join("dist", "map-layers", layer.id), { recursive: true });
+    layer.features = layer.features.map((x) => {
+      const { image, ...properties } = x.properties;
+      return image ? { ...x, properties: { ...properties, imageUrl: `map-layers/${layer.id}/${image}` } } : x;
+    });
+    return layer;
+  }),
   trails: list("trails", ".json").map((f) => ({ id: id(f), ...read(join("trails", f)) })),
   challenges: list("challenges", ".json").map((f) => ({ id: id(f), ...read(join("challenges", f)) })),
   stickerPacks,

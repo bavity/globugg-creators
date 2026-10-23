@@ -21,7 +21,10 @@
       },
       "properties": {
         "name": "Reunion Tower",
-        "note": "Dallas from the top of the ball; the light show starts at dusk."
+        "note": "Dallas from the top of the ball; the light show starts at dusk.",
+        "address": "300 Reunion Blvd E, Dallas, TX 75207",
+        "image": "reunion-tower.jpg",
+        "imageCredit": "Photo: Adrian Valenzuela, CC BY 2.0, via Wikimedia Commons"
       }
     },
     {
@@ -35,7 +38,10 @@
       },
       "properties": {
         "name": "Margaret Hunt Hill Bridge",
-        "note": "Walk the Trinity Skyline Trail side for the downtown view."
+        "note": "Walk the Trinity Skyline Trail side for the downtown view.",
+        "address": "Woodall Rodgers Fwy at the Trinity River, Dallas, TX 75207",
+        "image": "margaret-hunt-hill-bridge.jpg",
+        "imageCredit": "Photo: Tony Webster, CC BY-SA 2.0, via Wikimedia Commons"
       }
     },
     {
@@ -49,7 +55,10 @@
       },
       "properties": {
         "name": "Top of the Rock",
-        "note": "Three decks with Central Park on one side and the Empire State on the other."
+        "note": "Three decks with Central Park on one side and the Empire State on the other.",
+        "address": "30 Rockefeller Plaza, New York, NY 10111",
+        "image": "top-of-the-rock.jpg",
+        "imageCredit": "Photo: Daniel Schwen, CC BY-SA 3.0, via Wikimedia Commons"
       }
     },
     {
@@ -63,7 +72,10 @@
       },
       "properties": {
         "name": "Brooklyn Bridge Park",
-        "note": "Lower Manhattan across the water, free, best at sunset."
+        "note": "Lower Manhattan across the water, free, best at sunset.",
+        "address": "334 Furman St, Brooklyn, NY 11201",
+        "image": "brooklyn-bridge-park.jpg",
+        "imageCredit": "Photo: King of Hearts, CC BY-SA 3.0, via Wikimedia Commons"
       }
     },
     {
@@ -77,7 +89,10 @@
       },
       "properties": {
         "name": "Sky Garden",
-        "note": "Free tickets released weekly; book ahead."
+        "note": "Free tickets released weekly; book ahead.",
+        "address": "1 Sky Garden Walk, London EC3M 8AF",
+        "image": "sky-garden.jpg",
+        "imageCredit": "Photo: Colin, CC BY-SA 4.0, via Wikimedia Commons"
       }
     },
     {
@@ -91,7 +106,10 @@
       },
       "properties": {
         "name": "Primrose Hill",
-        "note": "A protected view over central London from the top of the hill."
+        "note": "A protected view over central London from the top of the hill.",
+        "address": "Primrose Hill, Camden, London NW1",
+        "image": "primrose-hill.jpg",
+        "imageCredit": "Photo: Jim Osley, CC BY-SA 2.0, via Wikimedia Commons"
       }
     },
     {
@@ -105,7 +123,10 @@
       },
       "properties": {
         "name": "Lekki-Ikoyi Link Bridge",
-        "note": "The Lagos skyline across the lagoon, lit up after dark."
+        "note": "The Lagos skyline across the lagoon, lit up after dark.",
+        "address": "Lekki-Ikoyi Link Bridge, Lekki Phase 1, Lagos",
+        "image": "lekki-ikoyi-link-bridge.jpg",
+        "imageCredit": "Photo: Ayorinde Ogundele, CC BY-SA 4.0, via Wikimedia Commons"
       }
     }
   ]

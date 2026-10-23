@@ -21,7 +21,10 @@
       },
       "properties": {
         "name": "Deep Ellum murals",
-        "note": "Dozens of walls along Elm St and Main St."
+        "note": "Dozens of walls along Elm St and Main St.",
+        "address": "Elm St and Main St, Deep Ellum, Dallas, TX 75226",
+        "image": "deep-ellum-murals.jpg",
+        "imageCredit": "Photo: Carol M. Highsmith, public domain, via Wikimedia Commons"
       }
     },
     {
@@ -29,13 +32,33 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -96.8213,
-          32.7514
+          -96.8279,
+          32.7494
         ]
       },
       "properties": {
         "name": "Bishop Arts murals",
-        "note": "Small walls around N Bishop Ave."
+        "note": "Small walls around N Bishop Ave.",
+        "address": "N Bishop Ave and W Davis St, Dallas, TX 75208",
+        "image": "bishop-arts-murals.jpg",
+        "imageCredit": "Photo: Carol M. Highsmith, public domain, via Wikimedia Commons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.7636,
+          32.7808
+        ]
+      },
+      "properties": {
+        "name": "Fair Park murals",
+        "note": "Restored 1936 Texas Centennial murals on the Art Deco buildings along the Esplanade.",
+        "address": "Fair Park, 3809 Grand Ave, Dallas, TX 75210",
+        "image": "fair-park-murals.jpg",
+        "imageCredit": "Photo: Feb Etal, public domain, via Wikimedia Commons"
       }
     }
   ]
