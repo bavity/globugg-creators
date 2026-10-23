@@ -1,0 +1,17 @@
+{
+  "name": "Weekend plans",
+  "author": {
+    "name": "Globugg",
+    "github": "bavity"
+  },
+  "license": "CC-BY-4.0",
+  "description": "For finding the plan, rounding up the crew and pulling up.",
+  "stickers": [
+    { "file": "plans.png", "name": "Plans?", "tags": ["thinking", "hello"] },
+    { "file": "live-now.png", "name": "Live now", "tags": ["wow", "party"] },
+    { "file": "pull-up.png", "name": "Pull up", "tags": ["hello", "party"] },
+    { "file": "hidden-gem.png", "name": "Hidden gem", "tags": ["wow", "like"] },
+    { "file": "worth-it.png", "name": "Worth it", "tags": ["like", "yay"] },
+    { "file": "whos-in.png", "name": "Who's in?", "tags": ["hello", "party"] }
+  ]
+}
